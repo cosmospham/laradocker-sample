@@ -1,0 +1,413 @@
+version: '2'
+
+services:
+
+### Applications Code Container #############################
+
+    applications_fbpage:
+        image: tianon/true
+        volumes:
+            - /Users/cosmos/dev/cosmos/test/facebook-page-manager/:/var/www/public
+#            - ../sample/:/var/www/sample
+        networks:
+            - fbpage
+
+### Workspace Utilities Container ###########################
+
+    workspace_fbpage:
+        build:
+            context: ./workspace
+            args:
+                - INSTALL_XDEBUG=true
+                - INSTALL_MONGO=false
+                - INSTALL_NODE=false
+                - INSTALL_YARN=false
+                - INSTALL_DRUSH=false
+                - INSTALL_AEROSPIKE_EXTENSION=false
+                - INSTALL_V8JS_EXTENSION=false
+                - COMPOSER_GLOBAL_INSTALL=false
+                - INSTALL_WORKSPACE_SSH=false
+                - PUID=1000
+                - PGID=1000
+                - NODE_VERSION=stable
+                - YARN_VERSION=latest
+                - TZ=UTC
+        volumes_from:
+            - applications_fbpage
+        extra_hosts:
+            # IMPORTANT: Replace with your Docker Host IP (will be appended to /etc/hosts)
+            - "dockerhost:192.168.0.103"
+        ports:
+           - "3222:22"
+        tty: true
+        environment:
+            - CONTAINER_TIMEZONE=Asia/Ho_Chi_Minh
+            - SET_CONTAINER_TIMEZONE=true
+        networks:
+            - fbpage
+
+### PHP-FPM Container #######################################
+
+    php-fpm_fbpage:
+        build:
+            context: ./php-fpm
+            args:
+                - INSTALL_XDEBUG=true
+                - INSTALL_SOAP=false
+                - INSTALL_MONGO=false
+                - INSTALL_ZIP_ARCHIVE=false
+                - INSTALL_MEMCACHED=false
+                - INSTALL_OPCACHE=false
+                - INSTALL_AEROSPIKE_EXTENSION=false
+                - CODEIGNITER=false
+            dockerfile: Dockerfile-56
+        volumes_from:
+            - applications_fbpage
+        volumes:
+            - ./logs/php-fpm-xdebug/:/tmp/xdebug_log
+            - ./logs/php-fpm:/var/log/
+        expose:
+            - "9000"
+#        ports:
+#            - "9002:9002"
+        links:
+            - workspace_fbpage
+        extra_hosts:
+            # IMPORTANT: Replace with your Docker Host IP (will be appended to /etc/hosts)
+            - "dockerhost:192.168.0.103"
+        environment:
+            # IMPORTANT: Set the Remote Interpreter entry matching name to `laravel`
+            - PHP_IDE_CONFIG=serverName=dockerhost
+            - CONTAINER_TIMEZONE=Asia/Ho_Chi_Minh
+            - SET_CONTAINER_TIMEZONE=true
+        networks:
+            - fbpage
+
+### Nginx Server Container ##################################
+
+    nginx_fbpage:
+        build:
+            context: ./nginx
+            args:
+                - PHP_UPSTREAM=php-fpm
+        volumes_from:
+            - applications_fbpage
+        volumes:
+            - ./logs/nginx/:/var/log/nginx
+            - ./nginx/sites/:/etc/nginx/sites-available
+        ports:
+            - "1180:80"
+            - "11443:443"
+        links:
+            - php-fpm_fbpage
+            - mysql_fbpage
+        environment:
+            - CONTAINER_TIMEZONE=Asia/Ho_Chi_Minh
+            - SET_CONTAINER_TIMEZONE=true
+        networks:
+            - fbpage
+
+### Apache Server Container #################################
+
+    apache2_fbpage:
+        build:
+            context: ./apache2
+            args:
+                - PHP_SOCKET=php-fpm_fbpage:9000
+        volumes_from:
+            - applications_fbpage
+        volumes:
+            - ./logs/apache2:/var/log/apache2
+        ports:
+            - "2180:80"
+            - "243:443"
+        links:
+            - php-fpm_fbpage
+            - mysql_fbpage
+        environment:
+            - CONTAINER_TIMEZONE=Asia/Ho_Chi_Minh
+            - SET_CONTAINER_TIMEZONE=true
+        networks:
+            - fbpage
+
+### HHVM Container ##########################################
+
+    hhvm_fbpage:
+        build: ./hhvm
+        volumes_from:
+            - applications_fbpage
+        expose:
+            - "9000"
+        links:
+            - workspace_fbpage
+        networks:
+            - fbpage
+
+### MySQL Container #########################################
+
+    mysql_fbpage:
+        build: 
+            context: ./mysql
+            args:
+                MYSQL_DATABASE: fb_page
+                MYSQL_USER: admin
+                MYSQL_PASSWORD: 123456
+                MYSQL_ROOT_PASSWORD: root
+        volumes:
+            - ./mysql/data/:/var/lib/mysql
+        ports:
+            - "23306:3306"
+        environment:
+            - CONTAINER_TIMEZONE=Asia/Ho_Chi_Minh
+            - SET_CONTAINER_TIMEZONE=true
+        networks:
+            - fbpage
+
+### MariaDB Container #######################################
+
+    mariadb_fbpage:
+        build: ./mariadb
+        volumes:
+            - mysql_fbpage:/var/lib/mysql
+        ports:
+            - "3306:3306"
+        environment:
+            MYSQL_DATABASE: homestead
+            MYSQL_USER: homestead
+            MYSQL_PASSWORD: secret
+            MYSQL_ROOT_PASSWORD: root
+        networks:
+            - fbpage
+
+### PostgreSQL Container ####################################
+
+    postgres_fbpage:
+        build: ./postgres
+        volumes:
+            - postgres_fbpage:/var/lib/postgresql/data
+        ports:
+            - "5432:5432"
+        environment:
+            POSTGRES_DB: homestead
+            POSTGRES_USER: homestead
+            POSTGRES_PASSWORD: secret
+
+### PostgreSQL PostGis Container ############################
+
+    postgres-postgis_fbpage:
+        build: ./postgres-postgis
+        volumes:
+            - postgres_fbpage:/var/lib/postgresql/data
+        ports:
+            - "5432:5432"
+        environment:
+            POSTGRES_DB: homestead
+            POSTGRES_USER: homestead
+            POSTGRES_PASSWORD: secret
+        networks:
+            - fbpage
+
+### Neo4j Container #########################################
+
+    neo4j_fbpage:
+        build: ./neo4j
+        ports:
+            - "7474:7474"
+            - "1337:1337"
+        environment:
+            - NEO4J_AUTH=homestead:secret
+        volumes:
+            - neo4j_fbpage:/var/lib/neo4j/data
+        networks:
+            - fbpage
+
+### MongoDB Container #######################################
+
+    mongo_fbpage:
+        build: ./mongo
+        ports:
+            - "27017:27017"
+        volumes:
+            - mongo_fbpage:/data/db
+        networks:
+            - fbpage
+
+### Redis Container #########################################
+
+    redis_fbpage:
+        build: ./redis
+        volumes:
+            - redis_fbpage:/data
+        ports:
+            - "6379:6379"
+        networks:
+            - fbpage
+
+### Aerospike c Container ###################################
+
+    aerospike_fbpage:
+        build: ./aerospike
+        volumes_from:
+            - workspace_fbpage
+        volumes:
+            - aerospike_fbpage:/opt/aerospike/data
+        ports:
+            - "3000:3000"
+            - "3001:3001"
+            - "3002:3002"
+            - "3003:3003"
+        networks:
+            - fbpage
+
+
+### Memcached Container #####################################
+
+    memcached_fbpage:
+        build: ./memcached
+        volumes:
+            - memcached_fbpage:/var/lib/memcached
+        ports:
+            - "11211:11211"
+        links:
+            - php-fpm_fbpage
+        networks:
+            - fbpage
+
+### Beanstalkd Container ####################################
+
+    beanstalkd_fbpage:
+        build: ./beanstalkd
+        ports:
+            - "11300:11300"
+        privileged: true
+        links:
+            - php-fpm_fbpage
+        networks:
+            - fbpage
+
+### RabbitMQ Container ######################################
+
+    rabbitmq_fbpage:
+        build: ./rabbitmq
+        ports:
+            - "5672:5672"
+            - "15671:15671"
+            - "8080:15672"
+        privileged: true
+        environment:
+            RABBITMQ_DEFAULT_USER: guest
+            RABBITMQ_DEFAULT_PASS: guest
+        links:
+            - php-fpm_fbpage
+        networks:
+            - fbpage
+
+### Beanstalkd Console Container ############################
+
+    beanstalkd-console_fbpage:
+        build: ./beanstalkd-console
+        ports:
+            - "2080:2080"
+        links:
+            - beanstalkd_fbpage
+        networks:
+            - fbpage
+
+### Caddy Server Container ##################################
+
+    caddy_fbpage:
+        build: ./caddy
+        ports:
+            - "80:80"
+            - "443:443"
+            - "2015:2015"
+        volumes_from:
+            - applications_fbpage
+        volumes:
+            - ./caddy/Caddyfile:/etc/Caddyfile
+            - ./logs/caddy:/var/log/caddy
+        links:
+            - php-fpm_fbpage
+        networks:
+            - fbpage
+
+### phpMyAdmin Container ####################################
+
+    phpmyadmin_fbpage:
+        build: ./phpmyadmin
+        environment:
+            PMA_ARBITRARY: 1
+            MYSQL_USER: homestead
+            MYSQL_PASSWORD: secret
+            MYSQL_ROOT_PASSWORD: root
+        ports:
+            - "8083:80"
+        links:
+            # for mysql container
+            - "mysql_fbpage:db"
+            # for mariadb container
+            # - "mariadb:db"
+        networks:
+            - fbpage
+
+### pgAdmin Container #######################################
+
+    pgadmin_fbpage:
+        build: ./pgadmin
+        ports:
+            - "5050:5050"
+        links:
+            - postgres_fbpage
+        networks:
+            - fbpage
+
+### ElasticSearch Container #################################
+
+    elasticsearch_fbpage:
+        build: ./elasticsearch
+        volumes:
+            - elasticsearch-data_fbpage:/usr/share/elasticsearch/data
+            - elasticsearch-pkugins_fbpage:/usr/share/elasticsearch/data
+        ports:
+            - "9200:9200"
+            - "9300:9300"
+        links:
+            - php-fpm_fbpage
+        networks:
+            - fbpage
+
+### Networks Setup ###########################################
+
+networks:
+    fbpage:
+        driver: "bridge"
+
+### Volumes Setup ###########################################
+
+volumes:
+    mysql_fbpage:
+        driver: "local"
+    postgres_fbpage:
+        driver: "local"
+    memcached_fbpage:
+        driver: "local"
+    redis_fbpage:
+        driver: "local"
+    neo4j_fbpage:
+        driver: "local"
+    mariadb_fbpage:
+        driver: "local"
+    mongo_fbpage:
+        driver: "local"
+    phpmyadmin_fbpage:
+        driver: "local"
+    aerospike_fbpage:
+        driver: "local"
+    caddy_fbpage:
+        driver: "local"
+    elasticsearch-data_fbpage:
+        driver: "local"
+    elasticsearch-pkugins_fbpage:
+        driver: "local"
+    sessions_fbpage:    ## nothing is connected to this (- ./data/sessions:/sessions)
+        driver: "local"

@@ -1,0 +1,760 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"set",
+				"setTimeout〔function〕"
+			],
+			[
+				"ion",
+				"ion-item"
+			],
+			[
+				"reso",
+				"response〔argument〕"
+			],
+			[
+				"res",
+				"response〔argument〕"
+			],
+			[
+				"stat",
+				"stateParams"
+			],
+			[
+				"loca",
+				"localStorage"
+			],
+			[
+				"remove",
+				"remove_toolbar"
+			],
+			[
+				"get_s_",
+				"get_site_url〔function〕"
+			],
+			[
+				"jquery",
+				"jquery-mobile"
+			],
+			[
+				"mar",
+				"margin-right"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"short",
+				"shortcode_exists〔function〕"
+			],
+			[
+				"Follow",
+				"Following"
+			],
+			[
+				"fun",
+				"function〔keyword〕"
+			],
+			[
+				"ini",
+				"initiator_user_id"
+			],
+			[
+				"class",
+				"class_exists"
+			],
+			[
+				"inclo",
+				"include_once〔function〕"
+			],
+			[
+				"for",
+				"$force_accept〔variable〕"
+			],
+			[
+				"the_",
+				"the_excerpt〔function〕"
+			],
+			[
+				"my_",
+				"my_is_friend_check〔function〕"
+			],
+			[
+				"update",
+				"$update_view〔variable〕"
+			],
+			[
+				"us",
+				"$user_id〔variable〕"
+			],
+			[
+				"use",
+				"username"
+			],
+			[
+				"new",
+				"$new_view〔variable〕"
+			],
+			[
+				"dou",
+				"doubleval〔function〕"
+			],
+			[
+				"flo",
+				"floatval〔function〕"
+			],
+			[
+				"yu",
+				"yugo_ratings"
+			],
+			[
+				"strip",
+				"strip_tags"
+			],
+			[
+				"va",
+				"var_dump"
+			],
+			[
+				"att",
+				"$attachments〔variable〕"
+			],
+			[
+				"ta",
+				"$taxonomy〔variable〕"
+			],
+			[
+				"get_pos",
+				"get_postdata〔function〕"
+			],
+			[
+				"var",
+				"var_dump〔function〕"
+			],
+			[
+				"yo",
+				"yugo_ratings_chars"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 227.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"word",
+				"WordPress Generate Salt Keys"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"salt",
+				"WordPress Generate Salt Keys"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/cosmos/dev/cosmos/docker/laradock",
+		"/Users/cosmos/dev/cosmos/docker/laradock/apache2",
+		"/Users/cosmos/dev/cosmos/docker/laradock/logs",
+		"/Users/cosmos/dev/cosmos/docker/laradock/nginx",
+		"/Users/cosmos/dev/cosmos/docker/laradock/nginx/sites",
+		"/Users/cosmos/dev/cosmos/docker/laradock/php-fpm",
+		"/Users/cosmos/dev/cosmos/docker/laradock/workspace",
+		"/Users/cosmos/dev/cosmos/test/osticket",
+		"/Users/cosmos/dev/cosmos/test/osticket/subticket",
+		"/Users/cosmos/dev/cosmos/test/osticket/subticket/public"
+	],
+	"file_history":
+	[
+		"/Users/cosmos/dev/cosmos/docker/laradock/nginx/sites/site-1.conf",
+		"/Users/cosmos/dev/cosmos/docker/laradock/php-fpm/xdebug.ini",
+		"/Users/cosmos/dev/cosmos/docker/laradock/workspace/xdebug.ini",
+		"/Users/cosmos/dev/cosmos/docker/laradock/docker-compose.yml",
+		"/Users/cosmos/dev/cosmos/docker/laradock/xdebugPhpFpm",
+		"/Users/cosmos/dev/cosmos/test/osticket/subticket/vendor/phpunit/php-code-coverage/src/Report/Html/Renderer/Template/css/style.css",
+		"/Users/cosmos/dev/cosmos/docker/laradock/mysql/Dockerfile",
+		"/Users/cosmos/dev/cosmos/docker/laradock/mysql/data/homestead/db.opt",
+		"/Users/cosmos/dev/cosmos/docker/laradock/mysql/data/auto.cnf",
+		"/Users/cosmos/dev/cosmos/docker/laradock/mysql/data/ib_logfile0",
+		"/Users/cosmos/dev/cosmos/docker/laradock/php-fpm/Dockerfile-56",
+		"/Users/cosmos/dev/cosmos/docker/laradock/nginx/sites/site-2.conf",
+		"/private/var/folders/m5/qkh30tsj68jgfgbw2dctckxr0000gp/T/fz3temp-2/test.php",
+		"/Users/cosmos/dev/ttb/delivery_basic/www/js/controllers.js",
+		"/Users/cosmos/dev/ttb/delivery_basic/config.xml",
+		"/Users/cosmos/dev/ttb/delivery_basic/platforms/android/build.gradle",
+		"/Users/cosmos/dev/ttb/delivery_basic/platforms/android/project.properties",
+		"/Users/cosmos/dev/ttb/delivery_basic/www/templates/order/search-for-update.html",
+		"/Users/cosmos/Downloads/Book1.csv",
+		"/Users/cosmos/dev/ttb/delivery_basic/.gitignore",
+		"/Users/cosmos/dev/ttb/delivery_basic/www/templates/about.html",
+		"/Users/cosmos/dev/ttb/delivery_basic/www/templates/order/result.modal.html",
+		"/Users/cosmos/dev/ttb/delivery_basic/www/lib/ionic/css/ionic.css",
+		"/Users/cosmos/dev/ttb/delivery_basic/www/lib/ionic/css/app.css",
+		"/Users/cosmos/dev/ttb/delivery_basic/www/templates/order/list.html",
+		"/Users/cosmos/dev/ttb/delivery_basic/www/index.html",
+		"/Users/cosmos/dev/ttb/delivery_basic/www/templates/order/result.html",
+		"/Users/cosmos/dev/ttb/delivery_basic/www/js/routes.js",
+		"/Users/cosmos/dev/ttb/delivery_basic/www/templates/order-check.html",
+		"/Users/cosmos/dev/ttb/delivery_basic/www/templates/order-update.html",
+		"/Users/cosmos/dev/ttb/delivery_basic/www/templates/menu.html",
+		"/Users/cosmos/dev/ttb/delivery_basic/www/js/services.js",
+		"/private/var/folders/m5/qkh30tsj68jgfgbw2dctckxr0000gp/T/fz3temp-2/sms.php",
+		"/Users/cosmos/dev/ttb/delivery_basic/www/js/config.js",
+		"/Users/cosmos/dev/ttb/delivery_basic/platforms/android/settings.gradle",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/themes/sahifa-child/functions.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/themes/sahifa-child/js/page-accelerator.script.js",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/themes/sahifa/framework/functions/mega-menus.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-login.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/themes/sahifa-child/template-login.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/yugo-follow/yugo-follow.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/themes/sahifa/framework/functions/theme-functions.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-includes/css/admin-bar.css",
+		"/Users/cosmos/dev/tugo/yugo/wp-admin/load-styles.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/themes/sahifa-child/js/tie-scripts-mobile.js",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/themes/sahifa-child/header.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/themes/sahifa/framework/functions/common-scripts.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/themes/sahifa-child/js/tie-scripts.js",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/themes/sahifa/js/tie-scripts.js",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/themes/sahifa-child/footer.php",
+		"/Users/cosmos/Downloads/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css",
+		"/Users/cosmos/dev/tugo/yugo/.htaccess",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/wonderplugin-slider-cracked/app/class-wonderplugin-slider-view.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/wonderplugin-slider-cracked/engine/wonderpluginslider.js",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/wonderplugin-slider-cracked/wonderpluginslider.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/themes/sahifa-child/style.css",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/wonderplugin-slider-cracked/app/class-wonderplugin-slider-list-table.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/buddypress/bp-templates/bp-legacy/buddypress-functions.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/buddypress/bp-friends/bp-friends-actions.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/buddypress-friends-only-activity-stream/buddypress-friends-only-activity-stream.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/buddypress/bp-friends/bp-friends-filters.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/buddypress/bp-friends/classes/class-bp-friends-friendship.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/buddypress/bp-friends/bp-friends-functions.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/buddypress/bp-loader.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/buddypress/bp-themes/bp-default/_inc/ajax.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/buddypress/bp-friends/bp-friends-template.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/buddypress/bp-core/bp-core-template.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/buddypress/bp-friends/bp-friends-widgets.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/buddypress/bp-friends/js/widget-friends.min.js",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/buddypress/bp-friends/js/widget-friends.js",
+		"/Users/cosmos/Library/Application Support/Sublime Text 3/Installed Packages/WordPress.sublime-package",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/themes/sahifa-child/single.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/slider-image/js/admin.js",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/themes/sahifa-child/template-friend-activity.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/buddypress-followers/_inc/bp-follow-actions.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/buddypress-followers/_inc/bp-follow-functions.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-config.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-includes/update.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-admin/includes/plugin-install.php",
+		"/Users/cosmos/dev/tugo/yugo/test/xxx.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/buddypress/bp-friends/bp-friends-notifications.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/themes/sahifa/template-tags.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/buddypress/bp-core/bp-core-dependency.php",
+		"/Users/cosmos/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/themes/sahifa/template-timeline.php",
+		"/Users/cosmos/Documents/Sublime Projects/yugo.sublime-project",
+		"/Users/cosmos/dev/tugo/yugo/.gitignore",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/avatar-manager-1.6.1/avatar-manager.php",
+		"/Users/cosmos/Library/Application Support/Sublime Text 3/Packages/User/PHP.sublime-build",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/yugo-rating/yugo-rating.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/themes/sahifa/framework/functions/tie-views.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/buddypress/bp-members/classes/class-bp-members-component.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/buddypress/bp-core/deprecated/1.5.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-includes/pluggable.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-includes/user.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-includes/class.wp-styles.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/themes/sahifa/single.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/wp-postratings/wp-postratings.php",
+		"/Users/cosmos/dev/tugo/yugo/info.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-includes/class-wp-error.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-includes/taxonomy.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-admin/js/tags-box.js",
+		"/Users/cosmos/dev/tugo/yugo/index.php",
+		"/Users/cosmos/dev/tugo/yugo/docker-compose.yml",
+		"/Users/cosmos/dev/tugo/yugo/logs/access.log",
+		"/Users/cosmos/dev/tugo/yugo/wp-includes/post.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-includes/class-wp-post.php",
+		"/Users/cosmos/dev/tugo/yugo/Vagrantfile",
+		"/Users/cosmos/dev/tugo/yugo/puphpet/config.yaml",
+		"/Users/cosmos/dev/tugo/yugo/puphpet/puppet/modules/mysql/manifests/server.pp",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/themes/sahifa-child/index.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/themes/twentysixteen/single.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-admin/themes.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-includes/theme.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-includes/meta.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-admin/includes/class-wp-site-icon.php",
+		"/Users/cosmos/dev/tugo/yugo/logs/error.log",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/id-card-manager/id-card-manager.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-includes/l10n.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-admin/post.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/rating-widget/rating-widget.php",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/id-card-manager/assets/css/avatar-manager.css",
+		"/Users/cosmos/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/cosmos/dev/tugo/yugo/wp-includes/functions.php",
+		"/Users/cosmos/dev/tugo/yugo/yugo.sql",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/id-card-manager/package.json",
+		"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/id-card-manager/Gruntfile.js",
+		"/Users/cosmos/dev/tugo/yugo/wp-includes/deprecated.php"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/cosmos/dev/ttb/delivery_basic/www",
+			"/Users/cosmos/dev/ttb/delivery_basic",
+			"/Users/cosmos/dev/ttb/delivery_basic/www",
+			"/Users/cosmos/dev/tugo/yugo/wp-content/themes/sahifa",
+			"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/wonderplugin-slider-cracked",
+			"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/wonderplugin-slider",
+			"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/buddypress",
+			"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/buddypress/bp-friends",
+			"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/buddypress",
+			"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/buddypress/bp-friends",
+			"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/slider-image",
+			"/Users/cosmos/dev/tugo/yugo/wp-content/plugins",
+			"/Users/cosmos/dev/tugo/yugo/wp-content",
+			"/Users/cosmos/dev/tugo/yugo/wp-content/plugins",
+			"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/buddypress",
+			"/Users/cosmos/dev/tugo/yugo/wp-content",
+			"/Users/cosmos/dev/tugo/yugo",
+			"/Users/cosmos/dev/tugo/yugo/wp-content/themes/sahifa",
+			"/Users/cosmos/dev/tugo/yugo",
+			"/Users/cosmos/dev/tugo/yugo/wp-content/themes/sahifa",
+			"/Users/cosmos/dev/tugo/yugo",
+			"/Users/cosmos/dev/tugo/yugo/wp-content/plugins/id-card-manager",
+			"/Users/cosmos/dev/tugo/yugo",
+			"/Users/cosmos/dev/tugo/osticket"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"workspace",
+			"\n\n    location / {\n         try_files $uri $uri/ /index.php$is_args$args;\n    }",
+			"cosmos",
+			"MIIEpAIBAAKCAQEAvp04YoGk18M68Qaj1O9JX7UUspOHgLCyV4goBEG8vIgZFnwX",
+			"data",
+			".item p",
+			".item .",
+			".item .p",
+			"item",
+			">>>>",
+			">>>",
+			"====",
+			"data",
+			"scope",
+			"response.error == 'token_invalid'",
+			"response.err",
+			"1",
+			"',\n",
+			"log",
+			"',\n",
+			"\n                            ",
+			"scope",
+			"\n\n                if ('undefined' === orderSn || !orderSn)\n                    throw new Error('Mã vận đơn không được để trống');",
+			"data",
+			"status",
+			"\n    ",
+			"    \n",
+			"error",
+			"e",
+			"start_el",
+			"menu-item",
+			"mobile-menu",
+			"menu-item",
+			"top-menu",
+			"DIRECTION_",
+			"screen",
+			"touchstart",
+			"mobile.loading",
+			"wp_enqueue_scripts",
+			"jquery",
+			"tie-scripts",
+			"script",
+			"slide-out-close",
+			"logo",
+			"wonderplugin_slider",
+			"versionmark",
+			"watermarktext",
+			"wtextdefault",
+			"watermarktext",
+			"jQuery Slider",
+			"WONDERPLUGIN_SLIDER_VERSION_TYPE",
+			"Free Version",
+			"bp_legacy_theme_ajax_addremove_friend",
+			"bp_dtheme_ajax_addremove_friend",
+			"bp_legacy_theme_ajax_addremove_friend",
+			"is_friend",
+			"Following",
+			"is_friend",
+			"yugo_friends_accept_friendship",
+			"bp_get_add_friend_button",
+			"yugo_bp_get_add_friend_button",
+			"bp_get_button",
+			"echo ",
+			"bp_add_friend_button",
+			"yugo_bp_add_friend_button",
+			"bp_add_friend_button",
+			"bp_get_add_friend_button",
+			"bp_get_button",
+			"Cancel Friendship",
+			"-1",
+			"friends_accept_friendship",
+			"bp_dtheme_ajax_accept_friendship",
+			"bp_dtheme_ajax_addremove_friend",
+			"accept_friendship",
+			"view_actions2",
+			");\n",
+			"Cancel Friendship request",
+			"friends_friendship_requested",
+			"friends_friendship_accepted",
+			"}\n",
+			"free",
+			"?>\n",
+			"}",
+			"bp_follow_is_following",
+			"bp_follow",
+			"following",
+			"bp_follow_is_following",
+			"addremove_friend",
+			"wp_ajax_addremove_friend",
+			"9",
+			"friends_action_add_friend",
+			"?></",
+			"restrict page",
+			"Timeline",
+			"template-timeline.php",
+			"_wp_page_template",
+			"timeline",
+			"is_site_admin",
+			"php",
+			");\n",
+			");",
+			"tie_setPostViews",
+			"Views",
+			"view",
+			"]);",
+			";\n",
+			"total",
+			"ratings_score",
+			"newtag",
+			"new-tag-post_tag",
+			"ajax-tag-search",
+			"n wp_insert_term",
+			"The active theme is broken",
+			"child",
+			"the_yugo_ratings",
+			"the_ratings",
+			"publish_post",
+			"avatar",
+			"utf8mb4",
+			"utf8mb4_unicode_520_ci",
+			"rating",
+			"Display this avatar",
+			"update_usermeta",
+			"avatar",
+			"Avatar",
+			"Avatar Uploads",
+			"avatar-manager",
+			"Avatar"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"utf8",
+			"utf8_general_ci",
+			"id-card",
+			"ID Card",
+			"ID Card Uploads",
+			"id-card-manager",
+			"ID Card",
+			"id-card-manager",
+			"ID Card Manager",
+			"id_card_manager"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 112.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "test-osticket-with-laravel.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"control",
+				"www/js/controllers.js"
+			],
+			[
+				"wp-lo",
+				"wp-login.php"
+			],
+			[
+				"adminba",
+				"wp-includes/css/admin-bar.css"
+			],
+			[
+				"loads",
+				"wp-admin/load-styles.php"
+			],
+			[
+				"commscript",
+				"wp-content/themes/sahifa/framework/functions/common-scripts.php"
+			],
+			[
+				"tie-s",
+				"wp-content/themes/sahifa/js/tie-scripts.js"
+			],
+			[
+				"style",
+				"wp-content/themes/sahifa-child/style.css"
+			],
+			[
+				"style.css",
+				"wp-content/themes/sahifa-child/style.css"
+			],
+			[
+				"buddypress/bp-loader.php",
+				"wp-content/plugins/buddypress/bp-loader.php"
+			],
+			[
+				"sing",
+				"wp-content/themes/sahifa-child/single.php"
+			],
+			[
+				"config",
+				"wp-config.php"
+			],
+			[
+				"wp-includes/update.php",
+				"wp-includes/update.php"
+			],
+			[
+				"wp-admin/includes/plugin-install.php",
+				"wp-admin/includes/plugin-install.php"
+			],
+			[
+				"class.wp-styles.php",
+				"wp-includes/class.wp-styles.php"
+			],
+			[
+				"avatar-manager.php",
+				"wp-content/plugins/avatar-manager-1.6.1/avatar-manager.php"
+			],
+			[
+				"post",
+				"wp-admin/post.php"
+			],
+			[
+				"avata",
+				"wp-content/plugins/avatar-manager-1.6.1/avatar-manager.php"
+			],
+			[
+				"functions.php",
+				"wp-includes/functions.php"
+			],
+			[
+				"pluga",
+				"wp-includes/pluggable.php"
+			],
+			[
+				"function",
+				"wp-includes/functions.php"
+			],
+			[
+				"ava",
+				"wp-content/plugins/avatar-manager-1.6.1/avatar-manager.php"
+			],
+			[
+				"wpc-",
+				"wp-config.php"
+			],
+			[
+				"ost-con",
+				"include/ost-sampleconfig.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Documents/Sublime Projects/osticket.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 183.0,
+		"last_filter": "ajaxfriend",
+		"selected_items":
+		[
+			[
+				"ajaxfriend",
+				"bp_legacy_theme_ajax_addremove_friend"
+			],
+			[
+				"friends_friendship_",
+				"bp_friends_friendship_requested_notification"
+			],
+			[
+				"bp_legacy_theme_ajax_addremove_friend",
+				"bp_legacy_theme_ajax_addremove_friend"
+			],
+			[
+				"bp_init",
+				"bp_init"
+			],
+			[
+				"add_friend",
+				"bp_add_friend_button"
+			],
+			[
+				"friend_add",
+				"friends_add_friend"
+			],
+			[
+				"thum",
+				"thumbnail"
+			],
+			[
+				"get_post_metaa",
+				"get_post_metadata"
+			],
+			[
+				"get_post_meta",
+				"get_post_metadata"
+			],
+			[
+				"get_post",
+				"get_post_metadata"
+			]
+		],
+		"width": 755.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 270.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
